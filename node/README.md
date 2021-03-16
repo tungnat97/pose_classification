@@ -10,4 +10,4 @@
 
 *Sharp:* `npm i --save sharp`
 
-**Demo**: `predict_flow.js`
+**Demo**: predict_flow.js
