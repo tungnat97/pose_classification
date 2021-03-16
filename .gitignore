@@ -1,0 +1,12 @@
+node_modules
+app.py
+utils
+train
+static
+templates
+labels
+data/cnn
+data/posedata/2
+data/posenet2
+data/posedata.zip
+data/posenet2.zip
