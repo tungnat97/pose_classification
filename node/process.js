@@ -4,10 +4,8 @@ const Jimp = require('jimp');
 const sharp = require('sharp');
 const fs = require('fs');
 
-const { writeFile, existsSync, mkdirSync, readdir, readdirSync, readFileSync } = require("fs")
+const { mkdirSync, readdir } = require("fs")
 const tfjs = require("@tensorflow/tfjs-node-gpu");
-const tf = require("@tensorflow/tfjs-core");
-const { canvas, Image, createCanvas } = require("canvas");
 const posenet = require("@tensorflow-models/posenet");
 const cv = require('./opencv.js');
 
@@ -19,25 +17,25 @@ const p_score = 0.2;
 const cnn_size = 128;
 const synth = 5;
 
-const parts = {
-    "nose": 0,
-    "leftEye": 1,
-    "rightEye": 2,
-    "leftEar": 3,
-    "rightEar": 4,
-    "leftShoulder": 5,
-    "rightShoulder": 6,
-    "leftElbow": 7,
-    "rightElbow": 8,
-    "leftWrist": 9,
-    "rightWrist": 10,
-    "leftHip": 11,
-    "rightHip": 12,
-    "leftKnee": 13,
-    "rightKnee": 14,
-    "leftAnkle": 15,
-    "rightAnkle": 16
-}
+// parts = {
+//     "nose": 0,
+//     "leftEye": 1,
+//     "rightEye": 2,
+//     "leftEar": 3,
+//     "rightEar": 4,
+//     "leftShoulder": 5,
+//     "rightShoulder": 6,
+//     "leftElbow": 7,
+//     "rightElbow": 8,
+//     "leftWrist": 9,
+//     "rightWrist": 10,
+//     "leftHip": 11,
+//     "rightHip": 12,
+//     "leftKnee": 13,
+//     "rightKnee": 14,
+//     "leftAnkle": 15,
+//     "rightAnkle": 16
+// }
 
 const pairs = [
     [1, 3], [2, 4],
